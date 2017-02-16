@@ -29,7 +29,7 @@ public class MaxPairwiseProduct
 
         int max_index2 = -1;
         for (int j = 0; j < n; ++j)
-            if ((numbers[j] != numbers[max_index1]) && ((max_index2 == -1) || (numbers[j] > numbers[max_index2])))
+            if ((j != max_index1) && ((max_index2 == -1) || (numbers[j] > numbers[max_index2])))
                 max_index2 = j;
 
         return ((Int64)(numbers[max_index1])) *numbers[max_index2];        
@@ -46,6 +46,6 @@ public class MaxPairwiseProduct
             numbers[i] = Int32.Parse(strNums[i]);
         }
         Console.WriteLine(getMaxPairwiseProduct(numbers));
-        Console.WriteLine(getMaxPairwiseProductFast(numbers));
+        Console.WriteLine(getMaxPairwiseProductFast(numbers));        
     }
 }
