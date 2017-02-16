@@ -12,7 +12,7 @@ public class MaxPairwiseProduct
             {
                 if (numbers[i] * numbers[j] > result)
                 {
-                    result = numbers[i] * numbers[j];
+                    result = (Int64) numbers[i] * numbers[j];
                 }
             }
         }
